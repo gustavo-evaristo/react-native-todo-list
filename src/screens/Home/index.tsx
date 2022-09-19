@@ -80,7 +80,7 @@ export function Home() {
           <Button onPress={handleCreateTask} />
         </View>
 
-        <View style={[styles.contentTaskInfo, !!tasks && styles.taskInfoBorderBottom]}>
+        <View style={[styles.contentTaskInfo, !tasks.length && styles.taskInfoBorderBottom]}>
           <TaskInfo title="Criadas" count={tasks.length} />
 
           <TaskInfo
